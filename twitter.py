@@ -7,7 +7,7 @@ class MyStreamListener(tweepy.StreamListener):
         if not hasattr(status, 'retweeted_status'):
                print('incomming status :)')
                print(status.user.screen_name+' : '+status.text)
-               bot = telegram.Bot(token='387093650:AAGb4uZjtt71N4LVPn_flI8JKTOWFy_ZW10')
+               bot = telegram.Bot(token='1308287616:AAEozc4HFq8zQjeFX8Nv2PVH7UvTjF6qWGU')
                send_list = Subscriptions.objects(twitter_screen_name=status.user.screen_name)
                print(send_list)
                for user in send_list:
